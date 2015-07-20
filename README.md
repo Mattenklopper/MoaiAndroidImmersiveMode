@@ -4,16 +4,21 @@ Simple integration of Immersive Mode for your Android project. Based on JDance's
 INSTALLATION:
 Place ImmersiveModeHandler.java in the same folder as Moai.java.
 
-Add package "com.ziplinegames.moai.ImmersiveModeHandler" to sExternalClasses array.
+Add package "com.ziplinegames.moai.ImmersiveModeHandler" to sExternalClasses array in Moai.java.
 
-In MoaiActivity.java add the following lines in the onCreate function:
-
-Under the line where mMoaiView variable gets created and before screensizes are set:
+In MoaiActivity.java import the package:
 ```java
-Point screenSize = ImmersiveModeHandler.getScreenSize();
+import android.graphics.Point;
 ```
 
-I put this line near the end of the function but it probably doesn't matter.
+Add the following lines in the onCreate function under the line where mMoaiView variable gets created:
+```java
+Point screenSize = ImmersiveModeHandler.getScreenSize();
+Moai.setScreenSize(screenSize.x, screenSize.y);
+Moai.setViewSize(screenSize.x, screenSize.y);
+```
+
+Put this line near the end of the function but it probably doesn't matter as long as it's after the above.
 ```java
 ImmersiveModeHandler.setupView(mMoaiView);
 ```
