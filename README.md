@@ -1,5 +1,6 @@
 # MoaiAndroidImmersiveMode
 Simple integration of Immersive Mode for your Android project. Based on JDance's code found at http://getmoai.com/forums/immersive-mode-t2415/?sid=78608f7778dfdd6844cc9385a700bd15
+This version handles keyboard input better and some other rare cases.
 
 INSTALLATION:
 Place ImmersiveModeHandler.java in the same folder as Moai.java.
